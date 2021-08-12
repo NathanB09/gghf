@@ -1,4 +1,5 @@
 import { useGames } from '../../hooks/use-games'
+import GameCard from '../GameCard'
 
 const GameList = () => {
   const { isLoading, data, error } = useGames()
@@ -14,7 +15,9 @@ const GameList = () => {
   return (
     <div>
       <h3>Games</h3>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
+      {data.map((game) => (
+        <GameCard key={game.id} game={game} />
+      ))}
     </div>
   )
 }

@@ -2,7 +2,7 @@ import { useQuery } from 'react-query'
 
 export const useGames = () => {
   const query = useQuery('games', () =>
-    fetch('https://free-to-play-games-database.p.rapidapi.com/api/games', {
+    fetch('https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=relevance', {
       method: 'GET',
       headers: {
         'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY,

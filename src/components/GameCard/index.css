@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+}
+
+.card img {
+  width: 30%;
+  height: auto;
+  object-fit: contain;
+}
+
+.card.game-info {
+  display: flex;
+  flex-direction: column;
+}

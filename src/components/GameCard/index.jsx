@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import PropTypes from 'prop-types'
 
 const GameCard = ({ game }) => {

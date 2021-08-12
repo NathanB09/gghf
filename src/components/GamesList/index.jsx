@@ -1,4 +1,4 @@
-import './index.css'
+import './index.scss'
 import { useGames } from '../../hooks/use-games'
 import GameCard from '../GameCard'
 

@@ -1,3 +1,4 @@
+import './index.css'
 import { useGames } from '../../hooks/use-games'
 import GameCard from '../GameCard'
 
@@ -13,8 +14,7 @@ const GameList = () => {
   }
 
   return (
-    <div>
-      <h3>Games</h3>
+    <div className='list-wrapper'>
       {data.map((game) => (
         <GameCard key={game.id} game={game} />
       ))}

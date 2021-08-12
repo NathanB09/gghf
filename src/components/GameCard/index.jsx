@@ -6,10 +6,13 @@ const GameCard = ({ game }) => {
     <div className='card'>
       <img src={game.thumbnail} alt='' />
       <div className='game-info'>
-        <h4>{game.title}</h4>
+        <div classname=''>
+          <h3>{game.title}</h3>
+          <p>{game.release_date}</p>
+        </div>
+        <p>{game.short_description}</p>
         <p>{game.genre}</p>
         <p>{game.platform}</p>
-        <p>{game.release_date}</p>
       </div>
     </div>
   )

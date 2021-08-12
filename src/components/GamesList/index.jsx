@@ -1,32 +1,22 @@
-import { useQuery } from 'react-query'
+import { useGames } from '../../hooks/use-games'
 
-const GameList = ({}) => {
-  const { isLoading, data, error } = useQuery('games', () =>
-    fetch('https://free-to-play-games-database.p.rapidapi.com/api/games', {
-      method: 'GET',
-      headers: {
-        'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY,
-        'x-rapidapi-host': process.env.REACT_APP_RAPID_API_HOST,
-      },
-    }).then((resp) => resp.json())
-  )
+const GameList = () => {
+  const { isLoading, data, error } = useGames()
 
   if (isLoading) {
     return 'Loading...'
   }
 
   if (error) {
-    return <pre>{JSON.stringify(error, '', 2)}</pre>
+    return <pre>{JSON.stringify(error, null, 2)}</pre>
   }
 
   return (
     <div>
       <h3>Games</h3>
-      <pre>{JSON.stringify(data, '', 2)}</pre>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
     </div>
   )
 }
-
-GameList.propTypes = {}
 
 export default GameList

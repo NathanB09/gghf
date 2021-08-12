@@ -23,7 +23,7 @@ const GameCard = ({ game }) => {
             <h3>{game.title}</h3>
             <p>{game.release_date}</p>
           </div>
-          <p>{game.short_description}</p>
+          <p className='card-description'>{game.short_description}</p>
         </div>
         <div className='card-footer'>
           <p>{game.genre}</p>

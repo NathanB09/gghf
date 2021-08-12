@@ -5,14 +5,30 @@ const GameCard = ({ game }) => {
   return (
     <div className='card'>
       <img src={game.thumbnail} alt='' />
-      <div className='game-info'>
-        <div classname=''>
-          <h3>{game.title}</h3>
-          <p>{game.release_date}</p>
-        </div>
+      {/* <div className='card-header'>
+        <h3>{game.title}</h3>
+        <p>{game.release_date}</p>
+      </div>
+      <div className='card-body'>
         <p>{game.short_description}</p>
+      </div>
+      <div className='card-footer'>
         <p>{game.genre}</p>
         <p>{game.platform}</p>
+      </div> */}
+
+      <div className='card-body'>
+        <div className='card-header'>
+          <div className='card-title'>
+            <h3>{game.title}</h3>
+            <p>{game.release_date}</p>
+          </div>
+          <p>{game.short_description}</p>
+        </div>
+        <div className='card-footer'>
+          <p>{game.genre}</p>
+          <p>{game.platform}</p>
+        </div>
       </div>
     </div>
   )

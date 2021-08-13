@@ -1,13 +1,12 @@
-.genre-tag {
+.platform-icon {
   display: flex;
   align-items: center;
   background-color: #222831;
-  padding: 4px 8px;
+  padding: 5px 4px;
   border-radius: 5px;
 
-  p {
+  svg {
     color: #ffd369;
-    font-weight: 600;
-    font-size: 12px;
+    padding: 0 4px;
   }
 }

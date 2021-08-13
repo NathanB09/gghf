@@ -1,6 +1,7 @@
 import './index.scss'
 import PropTypes from 'prop-types'
 import GenreTag from '../GenreTag'
+import PlatformIcon from '../PlatformIcon'
 
 const GameCard = ({ game }) => {
   return (
@@ -16,7 +17,7 @@ const GameCard = ({ game }) => {
         </div>
         <div className='card-footer'>
           <GenreTag genre={game.genre} />
-          <p>{game.platform}</p>
+          <PlatformIcon platform={game.platform} />
         </div>
       </div>
     </div>

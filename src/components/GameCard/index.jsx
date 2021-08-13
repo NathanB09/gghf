@@ -1,5 +1,6 @@
 import './index.scss'
 import PropTypes from 'prop-types'
+import GenreTag from '../GenreTag'
 
 const GameCard = ({ game }) => {
   return (
@@ -14,7 +15,7 @@ const GameCard = ({ game }) => {
           <p className='card-description'>{game.short_description}</p>
         </div>
         <div className='card-footer'>
-          <p>{game.genre}</p>
+          <GenreTag genre={game.genre} />
           <p>{game.platform}</p>
         </div>
       </div>

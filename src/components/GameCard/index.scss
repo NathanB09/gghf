@@ -4,6 +4,7 @@
   border-radius: 8px;
   overflow: hidden;
   background-color: #393e46;
+  transition: transform 300ms ease-in-out;
 
   img {
     width: 100%;
@@ -60,5 +61,10 @@
       justify-content: space-between;
       padding-top: 20px;
     }
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: transform 300ms ease-in-out;
   }
 }

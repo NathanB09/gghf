@@ -2,12 +2,13 @@ import './index.scss'
 import { useGames } from '../../hooks/use-games'
 import GameCard from '../GameCard'
 import Loader from '../Loader'
+import Error from '../Error'
 
 const GameList = () => {
   const { isLoading, data, error } = useGames()
 
   if (error) {
-    return <pre>{JSON.stringify(error, null, 2)}</pre>
+    return <Error />
   }
 
   return isLoading ? (

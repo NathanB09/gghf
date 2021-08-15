@@ -1,7 +1,7 @@
 import './index.scss'
 import { TiWarningOutline } from 'react-icons/ti'
 
-const Error = ({}) => {
+const Error = () => {
   return (
     <div className='error'>
       <TiWarningOutline />
@@ -9,7 +9,5 @@ const Error = ({}) => {
     </div>
   )
 }
-
-Error.propTypes = {}
 
 export default Error

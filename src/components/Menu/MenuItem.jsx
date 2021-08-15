@@ -27,7 +27,7 @@ const MenuItem = ({ children }) => {
 }
 
 MenuItem.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.array, PropTypes.elementType]),
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]),
 }
 
 export default MenuItem

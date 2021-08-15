@@ -25,7 +25,7 @@ const menuVariants = {
   },
 }
 
-const Menu = ({}) => {
+const Menu = () => {
   const [isOpen, toggleOpen] = useState(false)
 
   const handleToggle = () => toggleOpen((prevSate) => !prevSate)
@@ -38,7 +38,5 @@ const Menu = ({}) => {
     </motion.nav>
   )
 }
-
-Menu.propTypes = {}
 
 export default Menu

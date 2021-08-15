@@ -20,7 +20,7 @@ const menuVariants = {
       type: 'spring',
       stiffness: 400,
       damping: 40,
-      delay: 0.5,
+      delay: 0.4,
     },
   },
 }

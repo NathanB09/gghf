@@ -2,7 +2,7 @@ import './index.scss'
 import { motion } from 'framer-motion'
 
 const loaderVariants = {
-  animationOne: {
+  ballBounce: {
     x: [-40, 40],
     y: [0, -40],
     transition: {
@@ -22,9 +22,7 @@ const loaderVariants = {
 }
 
 const Loader = () => {
-  return (
-    <motion.div className='loader' variants={loaderVariants} animate='animationOne'></motion.div>
-  )
+  return <motion.div className='loader' variants={loaderVariants} animate='ballBounce'></motion.div>
 }
 
 export default Loader

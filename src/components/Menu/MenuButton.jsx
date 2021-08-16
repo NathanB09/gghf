@@ -1,4 +1,3 @@
-import './index.scss'
 import { motion } from 'framer-motion'
 import PropTypes from 'prop-types'
 
@@ -13,9 +12,9 @@ const Path = (props) => (
 )
 
 const MenuButton = ({ toggle }) => {
-  const themeColor = 'green'
+  const themeName = 'green'
   return (
-    <button onClick={toggle} className={themeColor}>
+    <button onClick={toggle} className={`menu-button ${themeName}`}>
       <svg width='23' height='23' viewBox='0 0 23 23'>
         <Path
           variants={{

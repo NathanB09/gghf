@@ -1,7 +1,7 @@
 @import '../../colors';
 @import '../../mixins';
 
-button {
+.menu-button {
   @include background-theme-color;
 
   outline: none;
@@ -21,13 +21,13 @@ button {
   padding-top: 6px;
 }
 
-ul,
-li {
+.menu-ul,
+.menu-li {
   margin: 0;
   padding: 0;
 }
 
-ul {
+.menu-ul {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +38,7 @@ ul {
   padding-bottom: 60px;
 }
 
-li {
+.menu-li {
   list-style: none;
   margin-bottom: 5px;
   cursor: pointer;
@@ -71,8 +71,8 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
-  button,
-  ul {
+  .menu-button,
+  .menu-ul {
     bottom: 15px;
     right: 15px;
   }

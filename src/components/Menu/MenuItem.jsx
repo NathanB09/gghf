@@ -18,17 +18,24 @@ const menuItemVariants = {
   },
 }
 
-const MenuItem = ({ children }) => {
-  const themeColor = 'green'
+const MenuItem = ({ children, onClick }) => {
+  const themeName = 'green'
   return (
-    <motion.li variants={menuItemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-      <div className={`menu-item ${themeColor}`}>{children}</div>
+    <motion.li
+      onClick={onClick}
+      className='menu-li'
+      variants={menuItemVariants}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      <div className={`menu-item ${themeName}`}>{children}</div>
     </motion.li>
   )
 }
 
 MenuItem.propTypes = {
   children: PropTypes.oneOfType([PropTypes.array, PropTypes.element]),
+  onClick: PropTypes.func,
 }
 
 export default MenuItem

@@ -1,12 +1,12 @@
 import './index.scss'
 
 const Footer = () => {
-  const themeColor = 'green'
+  const themeName = 'green'
   return (
     <footer>
       <p>
         Powered by:{' '}
-        <a className={themeColor} href='https://www.freetogame.com/api-doc' target='__blank'>
+        <a className={themeName} href='https://www.freetogame.com/api-doc' target='__blank'>
           FreeToGame
         </a>
       </p>

@@ -1,9 +1,9 @@
 import './index.scss'
 
 const Header = () => {
-  const themeColor = 'green'
+  const themeName = 'green'
   return (
-    <header className={themeColor}>
+    <header className={themeName}>
       <h1>gghf</h1>
     </header>
   )

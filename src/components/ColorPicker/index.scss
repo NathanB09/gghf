@@ -1,0 +1,53 @@
+@import '../../mixins';
+
+.color-palette {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  bottom: 67px;
+  right: 55px;
+}
+
+.color {
+  @include background-theme-color;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 8px;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.outline {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.color-picker {
+  position: fixed;
+  bottom: 88px;
+  right: 33px;
+  width: 40px;
+  height: 40px;
+  background: $base-dark;
+  border-radius: 22px;
+  border: 2px solid $base-accent;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .color-picker {
+    bottom: 78px;
+    right: 23px;
+  }
+}

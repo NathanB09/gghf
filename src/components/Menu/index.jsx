@@ -1,3 +1,4 @@
+import './index.scss'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import MenuButton from './MenuButton'
@@ -26,15 +27,15 @@ const menuVariants = {
 }
 
 const Menu = () => {
-  const themeColor = 'green'
+  const themeName = 'green'
   const [isOpen, toggleOpen] = useState(false)
 
   const handleToggle = () => toggleOpen((prevSate) => !prevSate)
 
   return (
-    <motion.nav animate={isOpen ? 'open' : 'closed'}>
-      <motion.div className={`menu-background ${themeColor}`} variants={menuVariants} />
-      <Navigation />
+    <motion.nav initial={false} animate={isOpen ? 'open' : 'closed'}>
+      <motion.div className={`menu-background ${themeName}`} variants={menuVariants} />
+      <Navigation menuIsOpen={isOpen} />
       <MenuButton toggle={handleToggle} />
     </motion.nav>
   )

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion'
-import { IoGameControllerOutline, IoColorPaletteOutline, IoShuffle } from 'react-icons/io5'
+import { IoGameControllerOutline, IoShuffle } from 'react-icons/io5'
+import PropTypes from 'prop-types'
 import MenuItem from './MenuItem'
+import ColorPicker from '../ColorPicker'
 
 const variants = {
   open: {
@@ -11,18 +13,20 @@ const variants = {
   },
 }
 
-const Navigation = () => (
-  <motion.ul variants={variants}>
+const Navigation = ({ menuIsOpen }) => (
+  <motion.ul className='menu-ul' variants={variants}>
     <MenuItem>
       <IoGameControllerOutline />
     </MenuItem>
     <MenuItem>
       <IoShuffle />
     </MenuItem>
-    <MenuItem>
-      <IoColorPaletteOutline />
-    </MenuItem>
+    <ColorPicker menuIsOpen={menuIsOpen} />
   </motion.ul>
 )
+
+Navigation.propTypes = {
+  menuIsOpen: PropTypes.bool,
+}
 
 export default Navigation

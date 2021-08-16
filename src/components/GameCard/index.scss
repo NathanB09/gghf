@@ -1,9 +1,12 @@
+@import '../../colors';
+@import '../../mixins';
+
 .card {
-  border-bottom: 3px solid #ffd369;
-  border-top: 3px solid #ffd369;
+  @include card-theme-color;
+
   border-radius: 8px;
   overflow: hidden;
-  background-color: #393e46;
+  background-color: $base-accent;
   transition: transform 300ms ease-in-out;
 
   img {
@@ -11,7 +14,6 @@
     max-height: 180px;
     overflow: hidden;
     object-fit: cover;
-    border-bottom: 1px solid #ffd369;
   }
 
   h3,

@@ -1,7 +1,10 @@
+@import '../../mixins';
+
 .loader {
+  @include background-theme-color;
+
   width: 20px;
   height: 20px;
   margin: auto;
   border-radius: 50%;
-  background: #ffd369;
 }

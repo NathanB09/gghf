@@ -22,7 +22,14 @@ const loaderVariants = {
 }
 
 const Loader = () => {
-  return <motion.div className='loader' variants={loaderVariants} animate='ballBounce'></motion.div>
+  const themeColor = 'green'
+  return (
+    <motion.div
+      className={`loader ${themeColor}`}
+      variants={loaderVariants}
+      animate='ballBounce'
+    ></motion.div>
+  )
 }
 
 export default Loader

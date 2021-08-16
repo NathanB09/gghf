@@ -4,8 +4,9 @@ import GenreTag from '../GenreTag'
 import PlatformIcon from '../PlatformIcon'
 
 const GameCard = ({ game }) => {
+  const themeColor = 'green'
   return (
-    <div className='card'>
+    <div className={`card ${themeColor}`}>
       <img src={game.thumbnail} alt='' />
       <div className='card-body'>
         <div className='card-header'>

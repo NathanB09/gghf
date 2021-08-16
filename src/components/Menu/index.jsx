@@ -26,13 +26,14 @@ const menuVariants = {
 }
 
 const Menu = () => {
+  const themeColor = 'green'
   const [isOpen, toggleOpen] = useState(false)
 
   const handleToggle = () => toggleOpen((prevSate) => !prevSate)
 
   return (
     <motion.nav animate={isOpen ? 'open' : 'closed'}>
-      <motion.div className='menu-background' variants={menuVariants} />
+      <motion.div className={`menu-background ${themeColor}`} variants={menuVariants} />
       <Navigation />
       <MenuButton toggle={handleToggle} />
     </motion.nav>

@@ -2,8 +2,9 @@ import './index.scss'
 import PropTypes from 'prop-types'
 
 const GenreTag = ({ genre }) => {
+  const themeColor = 'green'
   return (
-    <div className='genre-tag'>
+    <div className={`genre-tag ${themeColor}`}>
       <p>{genre}</p>
     </div>
   )

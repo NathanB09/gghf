@@ -19,9 +19,10 @@ const menuItemVariants = {
 }
 
 const MenuItem = ({ children }) => {
+  const themeColor = 'green'
   return (
     <motion.li variants={menuItemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-      <div className='menu-item'>{children}</div>
+      <div className={`menu-item ${themeColor}`}>{children}</div>
     </motion.li>
   )
 }

@@ -3,6 +3,7 @@ import { FaWindows, FaRegWindowMaximize, FaLayerGroup } from 'react-icons/fa'
 import PropTypes from 'prop-types'
 
 const PlatformIcon = ({ platform }) => {
+  const themeColor = 'green'
   const platforms = platform.split(', ')
 
   const getPlatformIcon = (plat, index) => {
@@ -16,7 +17,7 @@ const PlatformIcon = ({ platform }) => {
     }
   }
 
-  return <div className='platform-icon'>{platforms.map(getPlatformIcon)}</div>
+  return <div className={`platform-icon ${themeColor}`}>{platforms.map(getPlatformIcon)}</div>
 }
 
 PlatformIcon.propTypes = {

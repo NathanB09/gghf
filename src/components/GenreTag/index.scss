@@ -1,12 +1,16 @@
+@import '../../colors';
+@import '../../mixins';
+
 .genre-tag {
+  @include font-theme-color;
+
   display: flex;
   align-items: center;
-  background-color: #222831;
+  background-color: $base-dark;
   padding: 4px 8px;
   border-radius: 5px;
 
   p {
-    color: #ffd369;
     font-weight: 600;
     font-size: 12px;
   }

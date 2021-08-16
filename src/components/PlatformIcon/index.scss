@@ -1,12 +1,16 @@
+@import '../../colors';
+@import '../../mixins';
+
 .platform-icon {
+  @include font-theme-color;
+
   display: flex;
   align-items: center;
-  background-color: #222831;
+  background-color: $base-dark;
   padding: 5px 4px;
   border-radius: 5px;
 
   svg {
-    color: #ffd369;
     padding: 0 4px;
   }
 }

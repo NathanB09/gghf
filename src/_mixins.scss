@@ -1,0 +1,92 @@
+@import 'colors';
+
+@mixin card-theme-color {
+  &.yellow {
+    border-bottom: 3px solid $yellow;
+    border-top: 3px solid $yellow;
+
+    img {
+      border-bottom: 1px solid $yellow;
+    }
+  }
+
+  &.blue {
+    border-bottom: 3px solid $blue;
+    border-top: 3px solid $blue;
+
+    img {
+      border-bottom: 1px solid $blue;
+    }
+  }
+
+  &.red {
+    border-bottom: 3px solid $red;
+    border-top: 3px solid $red;
+
+    img {
+      border-bottom: 1px solid $red;
+    }
+  }
+
+  &.green {
+    border-bottom: 3px solid $green;
+    border-top: 3px solid $green;
+
+    img {
+      border-bottom: 1px solid $green;
+    }
+  }
+
+  &.purple {
+    border-bottom: 3px solid $purple;
+    border-top: 3px solid $purple;
+
+    img {
+      border-bottom: 1px solid $purple;
+    }
+  }
+}
+
+@mixin font-theme-color {
+  &.yellow {
+    color: $yellow;
+  }
+
+  &.blue {
+    color: $blue;
+  }
+
+  &.red {
+    color: $red;
+  }
+
+  &.green {
+    color: $green;
+  }
+
+  &.purple {
+    color: $purple;
+  }
+}
+
+@mixin background-theme-color {
+  &.yellow {
+    background: $yellow;
+  }
+
+  &.blue {
+    background: $blue;
+  }
+
+  &.red {
+    background: $red;
+  }
+
+  &.green {
+    background: $green;
+  }
+
+  &.purple {
+    background: $purple;
+  }
+}
